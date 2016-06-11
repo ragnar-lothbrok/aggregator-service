@@ -1,10 +1,13 @@
 package com.demo;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisSentinelConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
@@ -15,6 +18,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  *
  */
 @Configuration
+@EnableCaching
 public class RedisConfig {
 
 	private @Value("${redis.host-name}") String redisHostName;
@@ -53,5 +57,10 @@ public class RedisConfig {
 		redisTemplate.setKeySerializer(new StringRedisSerializer());
 		redisTemplate.setHashKeySerializer(new StringRedisSerializer());
 		return redisTemplate;
+	}
+
+	@Bean
+	RedisCacheManager cacheManager() {
+		return new RedisCacheManager(((RedisOperations<String, Object>) redisTemplate()));
 	}
 }

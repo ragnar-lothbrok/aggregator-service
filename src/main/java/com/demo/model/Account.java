@@ -1,4 +1,4 @@
-package com.demo.account.model;
+package com.demo.model;
 
 import java.io.Serializable;
 

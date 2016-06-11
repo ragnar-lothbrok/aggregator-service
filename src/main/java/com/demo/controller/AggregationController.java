@@ -1,4 +1,4 @@
-package com.demo.aggregator.controller;
+package com.demo.controller;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -24,9 +24,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.demo.account.model.Account;
-import com.demo.aggregator.constants.AggregatorConstants;
-import com.demo.aggregator.server.UserValidator;
+import com.demo.constants.AggregatorConstants;
+import com.demo.model.Account;
+import com.demo.security.UserValidator;
 
 /**
  * Client controller, fetches Order info from the microservice

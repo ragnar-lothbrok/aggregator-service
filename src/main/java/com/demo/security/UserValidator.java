@@ -1,4 +1,4 @@
-package com.demo.aggregator.server;
+package com.demo.security;
 
 import java.io.IOException;
 import java.net.URI;
@@ -30,8 +30,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
 import org.springframework.web.client.RestTemplate;
 
-import com.demo.account.model.Account;
-import com.demo.aggregator.constants.AggregatorConstants;
+import com.demo.constants.AggregatorConstants;
+import com.demo.model.Account;
 import com.google.gson.Gson;
 
 public class UserValidator {

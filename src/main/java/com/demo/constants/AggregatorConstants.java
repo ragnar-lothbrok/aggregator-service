@@ -1,4 +1,4 @@
-package com.demo.aggregator.constants;
+package com.demo.constants;
 
 import java.text.SimpleDateFormat;
 

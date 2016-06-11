@@ -1,4 +1,4 @@
-package com.demo.aggregator.security;
+package com.demo.security;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -15,8 +15,7 @@ import org.springframework.security.oauth2.provider.authentication.OAuth2Authent
 import org.springframework.security.web.context.HttpRequestResponseHolder;
 import org.springframework.security.web.context.SecurityContextRepository;
 
-import com.demo.aggregator.constants.AggregatorConstants;
-import com.demo.aggregator.server.UserValidator;
+import com.demo.constants.AggregatorConstants;
 
 public class EhcacheSecurityContextRepository implements SecurityContextRepository {
 

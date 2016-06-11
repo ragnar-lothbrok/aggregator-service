@@ -1,4 +1,4 @@
-package com.demo.aggregator.security;
+package com.demo.security;
 
 import java.util.ArrayList;
 
