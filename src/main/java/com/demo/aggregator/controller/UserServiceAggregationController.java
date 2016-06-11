@@ -34,7 +34,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.demo.account.model.Account;
 import com.demo.aggregator.constants.AggregatorConstants;
-import com.exclusively.aggregator.server.UserValidator;
+import com.demo.aggregator.server.UserValidator;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

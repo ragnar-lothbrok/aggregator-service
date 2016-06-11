@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: aggregator-service
+  cloud:
+    config:
+      label: utkarsh-local
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: CONFIGURATION-SERVER
+server:
+  port: 8082
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    enabled: true
+    eurekaServerDnsname: localhost
+    eurekaServerPort: 8761
+    serviceUrl:
+      defaultZone: http://10.11.19.133:8761/eureka/

@@ -1,4 +1,4 @@
-package com.exclusively.aggregator.server;
+package com.demo.aggregator.server;
 
 import java.io.IOException;
 import java.net.URI;

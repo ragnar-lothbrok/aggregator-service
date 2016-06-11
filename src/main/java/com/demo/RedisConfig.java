@@ -1,7 +1,6 @@
-package com.exclusively.aggregator.security;
+package com.demo;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisSentinelConfiguration;
@@ -16,7 +15,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  *
  */
 @Configuration
-@EnableCaching
 public class RedisConfig {
 
 	private @Value("${redis.host-name}") String redisHostName;
@@ -44,7 +42,7 @@ public class RedisConfig {
 
 	/**
 	 * Don't use Json Serializer as Security Context Object doesn't have default
-	 * conastructor.
+	 * Constructor.
 	 * 
 	 * @return
 	 */

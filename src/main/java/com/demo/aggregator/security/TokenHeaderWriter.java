@@ -1,4 +1,4 @@
-package com.exclusively.aggregator.security;
+package com.demo.aggregator.security;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
